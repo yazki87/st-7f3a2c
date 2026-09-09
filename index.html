@@ -568,7 +568,7 @@ function mkCell(key, rec, kind, swap){
 }
 
 function weekStats(monday){
-  var done = {x:0,y:0,z:0}, planned = {x:0,y:0,z:0}, swaps = 0, kept = 0;
+  var done = {v:0,o:0,b:0}, planned = {v:0,o:0,b:0}, swaps = 0, kept = 0;
   for(var i=0;i<7;i++){
     var r = dayOf(ymd(addDays(monday,i)));
     if(!r) continue;
