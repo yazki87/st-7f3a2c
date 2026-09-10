@@ -154,7 +154,7 @@
 
 <div id="gate" class="hidden">
   <div class="box">
-    <h1>Ledger</h1>
+    <h1>ST Planner</h1>
     <p class="lead">Sign in to see the shared week.</p>
     <div class="field">
       <label for="email">Email</label>
@@ -275,7 +275,7 @@ var SUPABASE_ANON_KEY = "sb_publishable_U2U5l5vktwXl_QVd2_D_mQ_gJBG6zXo";
 var TASKS = ["v","o","b"];
 var DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-var LS_STATE = "ledger.state", LS_URL = "ledger.url", LS_KEY = "ledger.key", LS_QUEUE = "ledger.queue";
+var LS_STATE = "ST Planner.state", LS_URL = "ST Planner.url", LS_KEY = "ST Planner.key", LS_QUEUE = "ST Planner.queue";
 
 /* ================= dates ================= */
 function ymd(d){ return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
@@ -437,7 +437,7 @@ function signedIn(){
   document.getElementById("gate").classList.add("hidden");
   pull().then(function(){
     if(!channel){
-      channel = sb.channel("ledger")
+      channel = sb.channel("ST Planner")
         .on("postgres_changes", {event:"*", schema:"public", table:"days"}, onRemoteDay)
         .on("postgres_changes", {event:"*", schema:"public", table:"settings"}, function(){ pullSettings(); })
         .subscribe(function(status){
