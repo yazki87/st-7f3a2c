@@ -1,6 +1,6 @@
 {
-  "name": "ST",
-  "short_name": "ST",
+  "name": "ST Planner",
+  "short_name": "STP",
   "description": "Plan the week, record what actually happened.",
   "start_url": "./index.html",
   "scope": "./",
